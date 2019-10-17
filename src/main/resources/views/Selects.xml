@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.0.xsd">
+
+	<selection name="team.task.status" id="redmine.team.task.status">
+		<option value="resolved">Resolved</option>
+		<option value="feedback">Feedback</option>
+		<option value="tested">Tested</option>
+		<option value="deployment">Deployment</option>
+	</selection>
+
+	<selection name="redmine.sync.config.redmine.mapping.field.select">
+		<option value="Status">Status</option>
+		<option value="Tracker">Tracker</option>
+		<option value="Priority">Priority</option>
+	</selection>
+
+	<selection name="redmine.batch.action.select">
+		<option value="0">Sync Projects</option>
+		<option value="1">Sync Issues</option>
+	</selection>
+
+</object-views>

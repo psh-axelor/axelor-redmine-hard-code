@@ -1,0 +1,20 @@
+apply plugin: "com.axelor.app-module"
+
+apply {
+	version = "5.0.0-SNAPSHOT"
+}
+
+axelor {
+	title "Axelor :: Redmine"
+	description "Axelor Redmine Module"
+
+	removable true
+}
+
+dependencies {
+	compile project(":modules:axelor-business-support")
+	compile ('org.json:json:20090211')
+	compile fileTree(dir: 'libs', include: ['*.jar'])
+	compile 'com.squareup.okhttp3:okhttp:3.14.1'
+	compile 'net.java:textile-j:2.2'
+}

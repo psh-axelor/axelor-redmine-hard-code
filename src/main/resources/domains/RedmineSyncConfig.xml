@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.0.xsd">
+
+	<module name="redmine" package="com.axelor.apps.redmine.db" />
+
+	<entity name="RedmineSyncConfig" lang="java">
+
+		<string name="redmineMappingFieldSelect" title="Redmine mapping field"
+			selection="redmine.sync.config.redmine.mapping.field.select" />
+		<one-to-many name="redmineSyncMappingList" title="Redmine sync mappings"
+			ref="com.axelor.apps.redmine.db.RedmineSyncMapping" mappedBy="redmineSyncConfig" />
+
+		<finder-method name="findByRedmineMappingField" using="redmineMappingFieldSelect" />
+
+	</entity>
+
+</domain-models>
